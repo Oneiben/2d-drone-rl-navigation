@@ -265,8 +265,6 @@ class Environment:
             self.middle_of_the_window.x < self.Quad.x,
             self.middle_of_the_window.y > self.Quad.y,
             self.middle_of_the_window.y < self.Quad.y
-            
-
             ], dtype=np.float32
         )
 

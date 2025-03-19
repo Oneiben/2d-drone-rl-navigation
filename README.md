@@ -1,4 +1,4 @@
-# 2D Quadrotor Gate Navigation
+# 2D Drone Gate Navigation using Reinforcement Learning
 
 ![Simulation Overview](./assets/gifs/simulation_overview.gif)
 
@@ -6,11 +6,11 @@
 
 ## Table of Contents
 
-- [2D Quadrotor Gate Navigation](#2d-quadrotor-gate-navigation)
+- [2D Drone Gate Navigation using Reinforcement Learning](#2d-drone-gate-navigation-using-reinforcement-learning)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
     - [Key Features](#key-features)
-    - [Advantage Actor-Critic (A2C) Algorithm](#advantage-actor-critic-a2c-algorithm)
+  - [Advantage Actor-Critic (A2C) Algorithm](#advantage-actor-critic-a2c-algorithm)
   - [Environment Details](#environment-details)
     - [Observations](#observations)
     - [Actions](#actions)
@@ -25,7 +25,7 @@
 
 ## Overview
 
-This project implements a **2D quadrotor gate navigation system** using **reinforcement learning (RL)**. The objective is to train a quadrotor to successfully navigate through gates using **position** and a set of **discrete actions**.
+This project implements a **2D drone gate navigation system** using **reinforcement learning (RL)**. The objective is to train a quadrotor to successfully navigate through gates using **position** and a set of **discrete actions**.
 
 ### Key Features
 
@@ -36,7 +36,7 @@ This project implements a **2D quadrotor gate navigation system** using **reinfo
 
 ---
 
-### Advantage Actor-Critic (A2C) Algorithm
+## Advantage Actor-Critic (A2C) Algorithm
 
 A2C is a policy gradient method that uses an **actor-network** to decide actions and a **critic-network** to evaluate the chosen actions. The critic helps reduce variance in policy updates, making learning more stable.
 
@@ -95,18 +95,19 @@ The reward function encourages efficient gate navigation:
 ## Project Structure
 
 ```plaintext
-2d-quadrotor-rl-navigation/
+2d-drone-rl-navigation/
 ├── assets/
 │   ├── diagrams/
 │   │  └── actor_critic_diagram.jpg
 │   ├── gifs/
 │   │  └── simulation_overview.gif
 ├── src/                  # Main scripts for training and testing
-│   ├── traim.py          # Training agent
+│   ├── train.py          # Training agent
 │   ├── model.py          # Neural network definitions (Actor and Critic)
 │   ├── environment/      # Environment, Reward function, Observations, and agent functions
 │   ├── memory.py         # Step_Memory and Episode_Memory
 │   ├── test.py           # Testing the trained model
+├── Arial.tff             # pygame module for loading and rendering fonts
 ├── LICENSE 
 ├── README.md
 └── requirements.txt      # Dependencies            
@@ -119,8 +120,8 @@ The reward function encourages efficient gate navigation:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/Oneiben/2d-quad-rl-navigation.git
-   cd 2d-quad-rl-navigation
+   git clone https://github.com/Oneiben/2d-drone-rl-navigation.git
+   cd 2d-drone-rl-navigation
    ```
 
 2. **Create a Virtual Environment (Recommended):**

@@ -27,9 +27,6 @@ from model import (  # Import the Model containing Actor and Critic classes
     t,
 )
 
-# from IPython import display
-
-
 class Agent:
     def __init__(self, env):
         """
@@ -159,9 +156,10 @@ class Agent:
                     self.memory.clear()  # Clear the memory after training
                     # env.reset()
 
+            # Store the total reward for this episode
             episode_rewards.append(
                 total_reward
-            )  # Store the total reward for this episode
+            )  
             TRV.append(total_reward)
 
             # torch.nn.utils.clip_grad_norm_(self.actor.parameters(), max_norm=0.5)
@@ -175,7 +173,6 @@ class Agent:
             # Save the model weights at the end of each episode
             self.actor.save("actor_model.pth")
             self.critic.save("critic_model.pth")
-
 
             display.clear_output(wait=True)
             display.display(plt.gcf())
