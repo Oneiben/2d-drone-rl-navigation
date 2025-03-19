@@ -146,9 +146,6 @@ cython_debug/
 *.swp
 *.swo
 
-# macOS-specific files
-.DS_Store
-
 # Windows-specific files
 Thumbs.db
 
