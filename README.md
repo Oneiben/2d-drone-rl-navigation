@@ -1,4 +1,4 @@
-# 2D Drone Gate Navigation using Reinforcement Learning
+# 2D Drone Gate Navigation (Scratch RL Implementation)
 
 ![Simulation Overview](./assets/gifs/simulation_overview.gif)
 
@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-- [2D Drone Gate Navigation using Reinforcement Learning](#2d-drone-gate-navigation-using-reinforcement-learning)
+- [2D Drone Gate Navigation (Scratch RL Implementation)](#2d-drone-gate-navigation-scratch-rl-implementation)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
     - [Key Features](#key-features)
@@ -25,11 +25,20 @@
 
 ## Overview
 
-This project implements a **2D drone gate navigation system** using **reinforcement learning (RL)**. The objective is to train a quadrotor to successfully navigate through gates using **position** and a set of **discrete actions**.
+This project implements a **2D drone gate navigation system** using **reinforcement learning (RL) from scratch**. Unlike many RL projects that use pre-built libraries such as **Stable-Baselines3** or **RLlib**, this project is entirely built from scratch, using only **PyTorch** to define the neural networks.
+
+By implementing RL from scratch, this project provides a deeper understanding of:
+- **Policy gradient methods**
+- **Advantage estimation (A2C)**
+- **Training loop structure**
+- **Reward shaping for real-time environments**
+
+The objective is to train a quadrotor to successfully navigate through gates using **position-based observations** and a set of **discrete actions**.
 
 ### Key Features
 
-- **Deep Reinforcement Learning (DRL):** Utilizes A2C algorithm **(Advantage Actor-Critic)**.
+- **Scratch RL Implementation:** No external RL libraries, just PyTorch.
+- **Deep Reinforcement Learning (DRL):** Implements the **Advantage Actor-Critic (A2C) algorithm** from scratch.
 - **2D Simulation:** Built with **PyGame**, enabling real-time visualization.
 - **Custom Reward Function:** Designed for efficient gate navigation.
 - **Custom Observation Space:** Provides relevant state information for optimal learning.
@@ -87,8 +96,8 @@ The agent can take one of the following **discrete actions**:
 ### Reward Function
 
 The reward function encourages efficient gate navigation:
-- **Positive Reward** Given when the quadrotor successfully passes through a gate or moves toward it.
-- **Negative Reward** Assigned for collisions with obstacles or moving away from the gate.
+- **Positive Reward**: Given when the quadrotor successfully passes through a gate or moves toward it.
+- **Negative Reward**: Assigned for collisions with obstacles or moving away from the gate.
 
 ---
 
@@ -108,13 +117,12 @@ The reward function encourages efficient gate navigation:
 │   ├── memory.py         # Step_Memory and Episode_Memory
 │   ├── test.py           # Testing the trained model
 ├── Arial.tff             # pygame module for loading and rendering fonts
-├── LICENSE 
+├── LICENSE
 ├── README.md
 └── requirements.txt      # Dependencies            
 ```
 
 ---
-
 
 ## Installation
 
@@ -151,7 +159,6 @@ The reward function encourages efficient gate navigation:
    ```
 
 ---
-
 
 ## Contributing
 
